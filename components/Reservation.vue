@@ -1,8 +1,8 @@
 <template>
   <nuxt-link :to="'/reservations/' + confirmationCode">
     <article class="reservation">
-      <div class="thumbnail" :style="{ backgroundImage:'url(' + thumbnail + ')'}" />
-      <h2>{{ title }}</h2>
+      <div class="thumbnail" :style="{ backgroundImage:'url(' + cityImage + ')'}" />
+      <h2>{{ city }}</h2>
       <p>{{ preview }}</p>
     </article>
   </nuxt-link>
@@ -10,18 +10,26 @@
 
 <script>
 export default {
+  // changed json mock instead
+  /* filters: {
+    removeImgUrlBrackets: (value) => {
+      if (!value) { return '' }
+      value = value.replace('<', '').replace('>', '')
+      return value
+    }
+  }, */
   props: {
-    thumbnail: {
+    cityImage: {
       type: String,
       default: ''
     },
-    title: {
+    city: {
       type: String,
       default: ''
     },
     confirmationCode: {
       type: String,
-      default: 'BBBBBB'
+      default: 'XXXXXX'
     },
     preview: {
       type: String,

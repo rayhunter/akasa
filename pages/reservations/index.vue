@@ -19,14 +19,17 @@ export default {
   components: {
     Reservation
   },
-  async asyncData ({ $axios }) {
-    const { reservations } = await $axios.get('http://demo6894002.mockable.io/akasa-data')
+  async asyncData ({ app, $axios }) {
+    const { reservations } = await app.$axios.$get(
+      'https://demo6894002.mockable.io/akasa-data'
+    )
+    // eslint-disable-next-line no-console
     console.log({ reservations })
-    return reservations
+    return { reservations }
   },
   data: () => {
     return {
-      reservations: ''
+      reservations: []
     }
   }
 }

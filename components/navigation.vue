@@ -1,20 +1,26 @@
 <template>
-  <div class="nav">
-    <nuxt-link to="/" class="brand">
-      Akasa Reservations
-    </nuxt-link>
-    <nav>
-      <nuxt-link to="/">
-        List
-      </nuxt-link> |
-      <nuxt-link to="/reservations">
-        Reservations
-      </nuxt-link> |
-      <nuxt-link to="/select">
-        Select
-      </nuxt-link>
-    </nav>
-  </div>
+  <section class="hero has-text-centered is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <div class="nav">
+          <nuxt-link to="/" class="brand">
+            Akasa Reservations
+          </nuxt-link>
+          <nav>
+            <nuxt-link to="/">
+              List
+            </nuxt-link> |
+            <nuxt-link to="/reservations">
+              Reservations
+            </nuxt-link> |
+            <nuxt-link to="/select">
+              Select
+            </nuxt-link>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>

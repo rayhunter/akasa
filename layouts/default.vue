@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div v-if="$nuxt.isOffline">
+      You are offline
+    </div>
     <Navigation />
     <nuxt />
   </div>
@@ -26,12 +29,12 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-#app {
+/* #app {
   box-sizing: border-box;
-  width: 500px;
+  width: 100%;
   padding: 0 20px 20px;
   margin: 0 auto;
-}
+} */
 hr {
   box-sizing: content-box;
   height: 0;

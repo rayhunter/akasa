@@ -18,7 +18,13 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: 'hsl(171, 100%, 41%)',
+    height: '10px',
+    duration: 1000,
+    rtl: true,
+    continuous: true, 
+  },
   /*
   ** Global CSS
   */
@@ -34,7 +40,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules
@@ -42,7 +49,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/bulma'
   ],
   /*
   ** Axios module configuration
@@ -60,5 +68,12 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  /*
+  ** Used for local testing on mobile, 
+  ** run 'yarn dev:host' instead
+  */
+  /* server: {
+    host: '0' // default: localhost
+  } */
 }
