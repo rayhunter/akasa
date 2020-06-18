@@ -7,6 +7,9 @@
       <nuxt-link to="/">
         List
       </nuxt-link> |
+      <nuxt-link to="/reservations">
+        Reservations
+      </nuxt-link> |
       <nuxt-link to="/select">
         Select
       </nuxt-link>

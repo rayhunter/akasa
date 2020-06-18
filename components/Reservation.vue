@@ -1,9 +1,11 @@
 <template>
-  <article class="reservation">
-    <div class="thumbnail" :style="{ backgroundImage:'url(' + thumbnail + ')'}" />
-    <h2>{{ title }}</h2>
-    <p>{{ preview }}</p>
-  </article>
+  <nuxt-link :to="'/reservations/' + confirmationCode">
+    <article class="reservation">
+      <div class="thumbnail" :style="{ backgroundImage:'url(' + thumbnail + ')'}" />
+      <h2>{{ title }}</h2>
+      <p>{{ preview }}</p>
+    </article>
+  </nuxt-link>
 </template>
 
 <script>
@@ -17,6 +19,10 @@ export default {
       type: String,
       default: ''
     },
+    confirmationCode: {
+      type: String,
+      default: 'BBBBBB'
+    },
     preview: {
       type: String,
       default: ''
@@ -26,6 +32,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: black;
+  text-decoration: none;
+}
 .reservation {
   box-sizing: border-box;
   width: 280px;
